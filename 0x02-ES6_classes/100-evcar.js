@@ -11,6 +11,8 @@ export default class EVCar extends Car {
   }
 
   cloneCar() {
-    return new Car();
+    let range = this._range;
+    range = undefined;
+    return new Car(range, range, range);
   }
 }

@@ -1,6 +1,6 @@
 export default class Car {
   constructor(brand, motor, color) {
-    /*if (typeof brand !== 'string') {
+    /* if (typeof brand !== 'string') {
       throw new Error('Brand must be a string');
     }
 
@@ -10,7 +10,7 @@ export default class Car {
 
     if (typeof color !== 'string') {
       throw new Error('Brand must be a string');
-    }*/
+    } */
 
     this._brand = brand;
     this._motor = motor;
