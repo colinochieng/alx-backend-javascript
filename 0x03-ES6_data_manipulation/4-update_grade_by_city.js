@@ -3,18 +3,19 @@ export default function updateStudentGradeByCity(getListStudents = [], city, new
     .filter(({ location }) => location === city)
     .map((value) => {
       let studentIsGraded = false;
+      const studentData = JSON.parse(JSON.stringify(value));
 
-      for (let { studentId, grade } of newGrades) {
-        if (studentId === value.id) {
+      for (const { studentId, grade } of newGrades) {
+        if (studentId === studentData.id) {
           studentIsGraded = true;
-          value.grade = grade;
+          studentData.grade = grade;
         }
       }
 
       if (!studentIsGraded) {
-        value.grade = "N/A";
+        studentData.grade = 'N/A';
       }
 
-      return value;
+      return studentData;
     });
 }
